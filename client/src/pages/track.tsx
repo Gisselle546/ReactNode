@@ -14,9 +14,9 @@ const Track = () => {
 
 const [tracking, setTracking] = useState<any>()
 
-console.log(tracking);
 
- const token = process.env.REACT_APP_TOKEN;
+
+ const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2NTExNDY2MTcsImV4cCI6MTY4MjY4MjYxNywiYXVkIjoiaHR0cHM6Ly9icmluZ2VycGFyY2VsLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiNTI1eXM2YWh4d3UyIiwianRpIjoiMDY5YjIxZTgtNTdjZi00YmE2LTk1ODctMjJkYmViMDg4OTNhIn0.wTcGGMWd6wf3F68K6cgZcmEyiNv6EfVZsvttbzIwtIE"
 async function calling() {
     const res = await axios.get(`${getUrl}`, {
         headers: {

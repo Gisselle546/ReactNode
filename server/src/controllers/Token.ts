@@ -18,7 +18,7 @@ const createToken = async (req: Request, res: Response): Promise<void>=>{
           };
           const token: any = jwt.sign({
            user:user
-          }, process.env.SECRETKEY!, { expiresIn: 60 * 60 });      
+          }, "SECRETKEY", { expiresIn: 60 * 60 });      
           res.status(200).json(token);
    
         } catch (error) {
