@@ -34,7 +34,7 @@ const checkToken = (req:any, res:any, next:any) => {
       return res.status(403).send("A token is required for authentication");
     }
     try {
-      const decoded = jwt.verify(token,  process.env.SECRETKEY!);
+      const decoded = jwt.verify(token,  "SECRETKEY");
       console.log(decoded)
       req.user = decoded;
     } catch (err) {
